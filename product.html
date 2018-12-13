@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>商品详情页</title>
+	<link rel="stylesheet" type="text/css" href="css/product.css">
+	<link rel="stylesheet" type="text/css" href="css/base1.css">
+</head>
+<body>
+	
+</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<!-- header -->
+<header class="w">
+	<img src="img/title-1.png" width="121px" height="93px">
+	<div class="title">
+		<h2>必抢大牌</h2>
+		<p>年度最受欢迎Top榜</p>
+	</div>
+	<img src="img/title-2.png" width="121px" height="93px">
+</header>
+
+<!-- main -->
+<main class="w">
+	<ul>
+		<!-- <li class="l">
+			<a href="#" class="l">
+				<img src="img/youyiku.png" width="190" height="190" class="big">
+				<img src="img/youku.png" width="82" height="41" class="dog">
+				<div class="decr">
+					<p>优衣库官方旗舰店</p>
+					<p>年终盛典全场包邮</p>
+				</div>
+			</a>
+		</li> -->
+	</ul>
+</main>
+<script>
+window.onload = function(){
+	$.ajax({
+		type:"post",
+		url:"getGoodsList.php",
+		async:true,
+		data:{},
+		success:function(data){
+			createUI(data);
+		}
+	});
+}	
+
+function createUI(data){
+	let Json = JSON.parse(data);
+	console.log(Json);
+	let length = data.length;
+	for( let i=0;i<length-1;i++){
+		let str = "<li class='l'><a href='detal.html?a="+Json[i].goodsId+"' class='l'><img src = "+Json[i].goodsImg+" width='190' height='190' class='big'><img src="+Json[i].beiyong1+" width='82' height='41' class='dog'><div class='decr'><p>"+Json[i].goodsName+"</p><p>"+Json[i].goodsDesc+"</p></div></a></li>";
+		console.log(Json[i].goodsImg)
+
+		$('ul').append(str);
+	}
+}
+	
+
+
+</script>
+

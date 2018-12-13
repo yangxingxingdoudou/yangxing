@@ -1,0 +1,68 @@
+header{
+	text-align: center;
+	height: 93px;
+	padding-top: 10px;
+}
+
+header .title{
+	width: 260px;
+	color: #fff;
+	display: inline-block;
+	height: 90px;
+	position: relative;
+	left: 0px;
+	top:-26px;
+}
+
+header .title h2{
+	font-size: 28px;
+	line-height: 50px;
+
+}
+
+header .title p{
+	font-size: 20px;
+	font-weight: 100;
+	line-height: 18px;
+}
+
+/*main*/
+main ul{
+	/*height: 860px;*/
+	/*background:pink;*/
+	overflow: hidden;
+}
+
+main ul li{
+	width: 190px;
+	/*background:#c51dd5;*/
+	border-radius: 10px;
+	overflow: hidden;
+	margin-right: 10px;
+}
+
+main ul li:nth-child(5n){
+	margin-right: 0;
+}
+
+main ul li a{
+	position: relative;
+}
+
+main ul li .dog{
+	border-radius: 20px;
+	position: absolute;
+	left: 46px;
+	top: 168px;
+}
+
+main ul li a p{
+	padding: 0 22px 13px 22px; 
+	font-size: 16px;
+	color: #fff;
+}
+
+main ul li a p:first-child{
+	line-height: 20px;
+	padding-top: 24px;
+}

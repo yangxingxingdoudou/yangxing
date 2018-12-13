@@ -1,0 +1,165 @@
+/*header*/
+header{
+	height: 88px;
+}
+
+/*banner*/
+.banner{
+	background: #ff902b;
+}
+
+.banner_w{
+	height: 600px;
+	background: url(../img/TB1OCaxuCzqK1RjSZPcSuvTepXa.jpg);
+}
+
+.banner_zhu{
+	width: 300px;
+	height: 278px;
+	background: #fff;
+	float: right;
+	margin-top: 90px;
+	padding: 15px 24px 112px 26px;
+}
+
+.banner_zhu h2{
+	font-size: 16px;
+	color: #3c3c3c;
+	line-height: 68px;
+}
+
+.banner_zhu form{
+	height: 110px;
+/*	background: #ff0;*/
+}
+
+.banner_zhu form label{
+	float: left;
+	height:40px;
+	border:1px solid #cbcbcb;
+	width: 100%;
+}
+
+.banner_zhu form label span{
+	float: right;
+	width: 80px;
+	margin-right: 10px;
+	line-height: 40px;
+	text-align: right;
+}
+
+.banner_zhu form label:first-child{
+	margin-bottom: 25px;
+}
+
+.banner_zhu form label:last-child{
+	margin-bottom: 20px;
+}
+
+.banner_zhu form img{
+	float: left;
+}
+
+.banner_zhu form input{
+	line-height: 40px;
+	float: left;
+	width: 160px;
+	text-indent: 10px;
+}
+
+.banner_zhu form ::-webkit-input-placeholder{
+	color: #999999;
+}
+
+.banner_zhu .banner_zhu_a{
+	text-align: center;
+	height: 42px;
+}
+
+.banner_zhu form .banner_zhu_a input{
+	font-size: 14px;
+	color: #fff;
+	line-height: 42px;
+	width: 300px;
+	background:#ff0036;
+	margin-top: 20px;
+}
+
+.banner_zhu .banner_zhu_mima{
+	line-height: 70px;
+	height: 12px;
+	text-align: right;
+	padding-top: 30px;
+	font-size: 12px;
+	color: #999;
+}
+
+.banner_zhu .banner_zhu_mima a{
+	font-size: 12px;
+	color: #999;
+	margin-right: 14px;
+}
+
+.banner_zhu .banner_zhu_mima a:hover{
+	color: #ff0036;
+}
+
+.banner_zhu .chec{
+	position: relative;
+	left: 1px;
+	top: 3px;
+	width: 15px;
+	height: 15px;
+}
+
+/*footer*/
+footer{
+	padding-top: 40px;
+	height: 195px;
+	background: #fff;
+	padding-bottom: 14px;
+}
+
+.footer p{
+	line-height: 34px;
+}
+
+.footer p a{
+	font-size: 12px;
+	color: #000;
+	margin-right: 6px;
+}
+
+.footer ul{
+	position: relative;
+}
+
+.footer ul li{
+	line-height: 28px;
+}
+
+.footer ul li span{
+	font-size: 12px;
+	color: #a4a4a4;
+	margin-right: 70px;
+}
+
+.footer ul li:last-child span{
+	font-size: 12px;
+	color:#4d685a;
+}
+
+.footer ul li span a{
+	font-size: 12px;
+	color: #a4a4a4;
+}
+
+.footer ul .oneImg{
+	position: absolute;
+	left: 507px;
+	top:4px;
+}
+
+.footer ul .twoImg{
+	margin-right: 14px;
+}

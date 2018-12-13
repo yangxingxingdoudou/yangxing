@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>商品详情页</title>
+	<style type="text/css">
+		html{overflow-y:scroll;}
+body{margin:0; font:12px "\5B8B\4F53",san-serif;background:#ffffff;}
+div,ul,li{padding:0; margin:0;}
+li{list-style-type:none;}
+img{vertical-align:top;border:0;}
+
+/* box */
+.box{width:310px;float: left}
+.tb-pic a{display:table-cell;text-align:center;vertical-align:middle;}
+.tb-pic a img{vertical-align:middle;}
+.tb-pic a{*display:block;*font-family:Arial;*line-height:1;}
+.tb-thumb{margin:10px 0 0;overflow:hidden;}
+.tb-thumb li{background:none repeat scroll 0 0 transparent;float:left;height:42px;margin:0 6px 0 0;overflow:hidden;padding:1px;}
+.tb-s310, .tb-s310 a{height:310px;width:310px;}
+.tb-s310, .tb-s310 img{max-height:310px;max-width:310px;}
+.tb-s310 a{*font-size:271px;}
+.tb-s40 a{*font-size:35px;}
+.tb-s40, .tb-s40 a{height:40px;width:40px;}
+.tb-booth{border:1px solid #CDCDCD;position:relative;z-index:1;}
+.tb-thumb .tb-selected{background:none repeat scroll 0 0 #C30008;height:40px;padding:2px;}
+.tb-thumb .tb-selected div{background-color:#FFFFFF;border:medium none;}
+.tb-thumb li div{border:1px solid #CDCDCD;}
+div.zoomDiv{z-index:999;position:absolute;top:0px;left:0px;width:200px;height:200px;background:#ffffff;border:1px solid #CCCCCC;display:none;text-align:center;overflow:hidden;}
+div.zoomMask{position:absolute;background:url("images/mask.png") repeat scroll 0 0 transparent;cursor:move;z-index:1;}
+	</style>
+	<link rel="stylesheet" type="text/css" href="css/detal.css">
+	<link rel="stylesheet" type="text/css" href="css/base2.css">
+</head>
+<body>
+	<div class="w w_box">
+	<div class="box">
+
+	<div class="tb-booth tb-pic tb-s310">
+		<a href="img/01.jpg"><img src="img/01_mid.jpg" alt="美女" rel="img/01.jpg" class="jqzoom" /></a>
+	</div>
+
+	<ul class="tb-thumb" id="thumblist">
+		<li class="tb-selected"><div class="tb-pic tb-s40"><a href="#"><img src="img/01_small.jpg" mid="img/01_mid.jpg" big="img/01.jpg"></a></div></li>
+		<li><div class="tb-pic tb-s40"><a href="#"><img  src="img/02_small.jpg" mid="img/02_mid.jpg" big="img/02.jpg"></a></div></li>
+		<li><div class="tb-pic tb-s40"><a href="#"><img src="img/03_small.jpg" mid="img/03_mid.jpg" big="img/03.jpg"></a></div></li>
+		<li><div class="tb-pic tb-s40"><a href="#"><img src="img/04_small.jpg" mid="img/04_mid.jpg" big="img/04.jpg"></a></div></li>
+		<li><div class="tb-pic tb-s40"><a href="#"><img src="img/05_small.jpg" mid="img/05_mid.jpg" big="img/05.jpg"></a></div></li>
+	</ul>
+	
+	</div>
+	<!-- <div class="l box_l">
+		<div class="box_img">
+			<img src="img/TB1OtaixVmWBuNjSspdL6TugXXa_430x430q90.jpg" width="430" height="430">
+		</div>
+		<ul>
+			<li class="l"><img src="img/O1CN012BGUAwrkPLZkZ4D_!!158748311.jpg_60x60q90.jpg" width="45" height="60"></li>
+			<li class="l"><img src="img/O1CN01fWp5p32BGUBhq6cLr_!!158748311.jpg_60x60q90.jpg" width="45" height="60"></li>
+			<li class="l"><img src="img/O1CN01DXQbak2BGUAvY97Nf_!!158748311.jpg_60x60q90.jpg" width="45" height="60"></li>
+			<li class="l"><img src="img/TB2.trfE7CWBuNjy0FaXXXUlXXa_!!158748311.jpg_60x60q90.jpg" width="45" height="60"></li>
+			<li class="l"><img src="img/O1CN01DXQbak2BGUAvY97Nf_!!158748311.jpg_60x60q90.jpg" width="45" height="60"></li>
+		</ul>
+	</div> -->
+
+
+
+	<div class="r box_r">
+		<!-- <div class="top">
+			<h2>波司登轻薄羽绒服男士短款2018秋冬立领修身保暖潮外套B80131005</h2>
+			<h3>18秋新品 蓄热防水 轻薄便携</h3>
+			<p>
+				<em>价格</em>
+				<span>￥399.00</span>
+			</p>
+			<p>
+				<em>运费</em>
+				<span>
+					<select>
+						<option>杭州</option>
+					</select>
+				</span>
+			</p>
+			<p>
+				<a href="#">
+					累计评价
+					<span>14519</span>
+				</a>
+				<a href="#">
+					送天猫积分
+					<span>199</span>
+				</a>
+			</p>
+		</div> -->
+		<div class="botm">
+			<div class="now">立即购买</div>
+			<div class="car">加入购物车</div>
+		</div>
+	</div>
+		<div class="bom">
+			<div class="w footer">
+				<ul>
+					<li>
+						<span>增值电信业务经营许可证：<a href="#">浙B2-20110446</a></span>
+						<span>网络经营许可证：<a href="#">浙B2-20110446</a><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12318举报</a></span>
+					</li>
+					<li>
+						<span>互联网电信业务经营许可证：<a href="#">浙B2-20110446</a></span>
+						<span>浙公网安备：<a href="#">330130002000120号</a></span>
+					</li>
+					<li>
+						&copy;2003-2007TMALL,COM版权所有
+					</li>
+				</ul>
+		</div>
+	</div>
+</div>
+	
+</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.imagezoom.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+
+	$(".jqzoom").imagezoom();
+	
+	$("#thumblist li a").click(function(){
+		$(this).parents("li").addClass("tb-selected").siblings().removeClass("tb-selected");
+		$(".jqzoom").attr('src',$(this).find("img").attr("mid"));
+		$(".jqzoom").attr('rel',$(this).find("img").attr("big"));
+	});
+
+});
+
+window.onload = function(){
+	$.ajax({
+		type:'get',
+		url:'getGoodsList.php',
+		async:true,
+		data:,
+		success:function(data){
+			createUI(data)
+		}
+	})
+}
+
+function createUI(data){
+	let json = JSON.pase(data);
+	let length = data.length;
+
+	let str1 = '<a href="img/01.jpg"><img src="img/01_mid.jpg" alt="美女" rel="img/01.jpg" class="jqzoom" /></a>';
+		$('.tb-booth tb-pic').append(str1);
+
+	for(let i=0;i<5;i++){
+		let str2 = '<li class="tb-selected"><div class="tb-pic tb-s40"><a href="#"><img src="'+json[i].beiyong2+'" mid="'+json[i].beiyong3+'" big="img/01.jpg"></a></div></li>';
+			$('ul').append(str2);
+		let str3 = "";
+			$('').append(str3);
+	}
+
+}
+
+</script>

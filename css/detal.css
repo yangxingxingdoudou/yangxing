@@ -1,0 +1,184 @@
+/*.w*/
+
+.w_box{
+	margin: 100px auto 0;
+	padding: 40px 0 18px;
+	overflow: hidden;
+}
+
+.box_l{
+	width: 420px;
+	overflow: hidden;
+}
+
+.box_l img{
+	display: block;
+}
+
+.box_r{
+	width: 520px;
+/*	height: 502px;*/
+	padding-left: 10px;
+}
+
+.bom{
+	height: 100px;
+	clear: both;
+}
+
+.box_l ul{
+	overflow: hidden;
+	padding: 23px 0 5px;
+}
+
+.box_l ul li{
+	margin:0 19px;
+}
+
+.box_l ul li img{
+	display: block;
+}
+
+.box_r .top h2{
+	font-size: 16PX;
+	color: #000;
+}
+
+.box_r .top h3{
+	font-size: 14PX;
+	color: red;
+	line-height: 28PX;
+	font-weight: 100;
+}
+
+.box_r .top p:nth-of-type(1){
+	background: url(../img/bg.png) left top repeat;
+	width: 499px;
+	line-height: 40px;
+} 
+
+.box_r .top p:nth-of-type(1) em{
+	font-size: 12px;
+	color: #9999a3;
+	font-style: normal;
+	margin-left: 10px;
+	margin-right: 15px;
+} 
+
+.box_r .top p:nth-of-type(1) span{
+	font-size: 18px;
+	color: red;
+	font-weight: 600;
+} 
+
+.box_r .top p:nth-of-type(2){
+	width: 499px;
+	line-height: 40px;
+} 
+
+.box_r .top p:nth-of-type(2) em{
+	font-size: 12px;
+	color: #9999a3;
+	font-style: normal;
+	margin-left: 10px;
+	margin-right: 15px;
+} 
+
+.box_r .top p:nth-of-type(2) span{
+	font-size: 12px;
+	color: black;
+} 
+
+.box_r .top p:nth-of-type(2) span select{
+	border:none;
+	outline: none;
+}
+
+.box_r .top p:nth-of-type(3){
+	width: 499px;
+	line-height: 40px;
+	border-top: 1px dashed #ccc;
+	border-bottom: 1px dashed #ccc;
+	text-align: center;
+	overflow: hidden;
+} 
+
+.box_r .top p:nth-of-type(3) a{
+	float: left;
+	width: 248px;
+	text-align: center;
+	color: #ccc;
+}
+
+.box_r .top p:nth-of-type(3) a:first-child span{
+	color:red;
+}
+
+.box_r .top p:nth-of-type(3) a:last-child span{
+	color:green;
+}
+
+.botm{
+	position: relative;
+}
+
+.botm .now{
+	position: absolute;
+	left: 60px;
+	top:130px;
+	width: 178px;
+	height: 38px;
+	color: red;
+	background: pink;
+	border:1px solid red;
+	text-align: center;
+	line-height: 38px;
+}
+
+.botm .car{
+	position: absolute;
+	left: 290px;
+	top:130px;
+	border:1px solid red;
+	width: 178px;
+	height: 38px;
+	background: red;
+	color: white;
+	text-align: center;
+	line-height: 38px;
+}
+
+.footer ul{
+	position: relative;
+}
+
+.footer ul li{
+	line-height: 28px;
+}
+
+.footer ul li span{
+	font-size: 12px;
+	color: #a4a4a4;
+	margin-right: 70px;
+}
+
+.footer ul li:last-child span{
+	font-size: 12px;
+	color:#4d685a;
+}
+
+.footer ul li span a{
+	font-size: 12px;
+	color: #a4a4a4;
+}
+
+.footer ul .oneImg{
+	position: absolute;
+	left: 507px;
+	top:4px;
+}
+
+.footer ul .twoImg{
+	margin-right: 14px;
+}
+
