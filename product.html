@@ -10,7 +10,7 @@
 	
 </body>
 </html>
-<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/jquery.js"></script>
 <!-- header -->
 <header class="w">
 	<img src="img/title-1.png" width="121px" height="93px">
@@ -56,6 +56,7 @@ function createUI(data){
 	for( let i=0;i<length-1;i++){
 		let str = "<li class='l'><a href='detal.html?a="+Json[i].goodsId+"' class='l'><img src = "+Json[i].goodsImg+" width='190' height='190' class='big'><img src="+Json[i].beiyong1+" width='82' height='41' class='dog'><div class='decr'><p>"+Json[i].goodsName+"</p><p>"+Json[i].goodsDesc+"</p></div></a></li>";
 		console.log(Json[i].goodsImg)
+		console.log(Json[i].goodsId);
 
 		$('ul').append(str);
 	}

@@ -34,21 +34,21 @@ div.zoomMask{position:absolute;background:url("images/mask.png") repeat scroll 0
 </head>
 <body>
 	<div class="w w_box">
-	<div class="box">
+		<div class="box">
 
-	<div class="tb-booth tb-pic tb-s310">
-		<a href="img/01.jpg"><img src="img/01_mid.jpg" alt="美女" rel="img/01.jpg" class="jqzoom" /></a>
-	</div>
+			<div class="tb-booth tb-pic tb-s310">
+				<!-- <a href="img/01.jpg"><img src="img/01_mid.jpg" alt="美女" rel="img/01.jpg" class="jqzoom" /></a> -->
+			</div>
 
-	<ul class="tb-thumb" id="thumblist">
-		<li class="tb-selected"><div class="tb-pic tb-s40"><a href="#"><img src="img/01_small.jpg" mid="img/01_mid.jpg" big="img/01.jpg"></a></div></li>
-		<li><div class="tb-pic tb-s40"><a href="#"><img  src="img/02_small.jpg" mid="img/02_mid.jpg" big="img/02.jpg"></a></div></li>
-		<li><div class="tb-pic tb-s40"><a href="#"><img src="img/03_small.jpg" mid="img/03_mid.jpg" big="img/03.jpg"></a></div></li>
-		<li><div class="tb-pic tb-s40"><a href="#"><img src="img/04_small.jpg" mid="img/04_mid.jpg" big="img/04.jpg"></a></div></li>
-		<li><div class="tb-pic tb-s40"><a href="#"><img src="img/05_small.jpg" mid="img/05_mid.jpg" big="img/05.jpg"></a></div></li>
-	</ul>
+			<ul class="tb-thumb" id="thumblist">
+			<!-- 	<li class="tb-selected"><div class="tb-pic tb-s40"><a href="#"><img src="img/01_small.jpg" mid="img/01_mid.jpg" big="img/01.jpg"></a></div></li>
+				<li><div class="tb-pic tb-s40"><a href="#"><img  src="img/02_small.jpg" mid="img/02_mid.jpg" big="img/02.jpg"></a></div></li>
+				<li><div class="tb-pic tb-s40"><a href="#"><img src="img/03_small.jpg" mid="img/03_mid.jpg" big="img/03.jpg"></a></div></li>
+				<li><div class="tb-pic tb-s40"><a href="#"><img src="img/04_small.jpg" mid="img/04_mid.jpg" big="img/04.jpg"></a></div></li>
+				<li><div class="tb-pic tb-s40"><a href="#"><img src="img/05_small.jpg" mid="img/05_mid.jpg" big="img/05.jpg"></a></div></li> -->
+			</ul>
 	
-	</div>
+		</div>
 	<!-- <div class="l box_l">
 		<div class="box_img">
 			<img src="img/TB1OtaixVmWBuNjSspdL6TugXXa_430x430q90.jpg" width="430" height="430">
@@ -61,11 +61,8 @@ div.zoomMask{position:absolute;background:url("images/mask.png") repeat scroll 0
 			<li class="l"><img src="img/O1CN01DXQbak2BGUAvY97Nf_!!158748311.jpg_60x60q90.jpg" width="45" height="60"></li>
 		</ul>
 	</div> -->
-
-
-
 	<div class="r box_r">
-		<!-- <div class="top">
+		<div class="top">
 			<h2>波司登轻薄羽绒服男士短款2018秋冬立领修身保暖潮外套B80131005</h2>
 			<h3>18秋新品 蓄热防水 轻薄便携</h3>
 			<p>
@@ -90,12 +87,13 @@ div.zoomMask{position:absolute;background:url("images/mask.png") repeat scroll 0
 					<span>199</span>
 				</a>
 			</p>
-		</div> -->
+		</div>
 		<div class="botm">
 			<div class="now">立即购买</div>
 			<div class="car">加入购物车</div>
 		</div>
 	</div>
+
 		<div class="bom">
 			<div class="w footer">
 				<ul>
@@ -111,8 +109,8 @@ div.zoomMask{position:absolute;background:url("images/mask.png") repeat scroll 0
 						&copy;2003-2007TMALL,COM版权所有
 					</li>
 				</ul>
+			</div>
 		</div>
-	</div>
 </div>
 	
 </body>
@@ -120,7 +118,22 @@ div.zoomMask{position:absolute;background:url("images/mask.png") repeat scroll 0
 <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
 <script type="text/javascript" src="js/jquery.imagezoom.min.js"></script>
 <script type="text/javascript">
-	$(document).ready(function(){
+$(document).ready(function(){
+	let t = getUrlParam("a");
+		console.log(t);
+
+
+	$.ajax({
+		type:"get",
+		url:"getGoodsList.php",
+		async:true,
+		data:{},
+		success:function(data){
+			console.log(data);
+			createUI(data);
+		}
+	});
+
 
 	$(".jqzoom").imagezoom();
 	
@@ -132,32 +145,35 @@ div.zoomMask{position:absolute;background:url("images/mask.png") repeat scroll 0
 
 });
 
-window.onload = function(){
-	$.ajax({
-		type:'get',
-		url:'getGoodsList.php',
-		async:true,
-		data:,
-		success:function(data){
-			createUI(data)
-		}
-	})
-}
 
 function createUI(data){
-	let json = JSON.pase(data);
-	let length = data.length;
+	let t = getUrlParam("a");
+	// console.log(t);
+	let json = JSON.parse(data); //把JSON数组字符串转成JSON数组
+	console.log(json);
+	for(let i=0;i<json.length;i++){
+		if(json[i].goodsId == t){
+			// console.log(json[i].goodsId);
 
-	let str1 = '<a href="img/01.jpg"><img src="img/01_mid.jpg" alt="美女" rel="img/01.jpg" class="jqzoom" /></a>';
-		$('.tb-booth tb-pic').append(str1);
-
-	for(let i=0;i<5;i++){
-		let str2 = '<li class="tb-selected"><div class="tb-pic tb-s40"><a href="#"><img src="'+json[i].beiyong2+'" mid="'+json[i].beiyong3+'" big="img/01.jpg"></a></div></li>';
-			$('ul').append(str2);
-		let str3 = "";
-			$('').append(str3);
+		let str1 = '<a href="'+json[i].beiyong2+'"><img src="'+json[i].beiyong3+'" alt="美女" rel="'+json[i].beiyong2+'" class="jqzoom" /></a>'
+				$('.tb-booth').append(str1);
+				console.log(json[i].beiyong2);
+				console.log(json[i].beiyong3);
+		}
+			let str2='<li class="tb-selected"><div class="tb-pic tb-s40"><a href="#"><img src="'+json[i].beiyong4+'" mid="'+json[i].beiyong3+'" big="'+json[i].beiyong2+'"></a></div></li>';
+				$(".tb-thumb").append(str2);
 	}
+}
 
+//获取id的函数
+function getUrlParam(name) {
+	var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+
+	var r = window.location.search.substr(1).match(reg); //匹配目标参数
+	if(r!=null){
+		return unescape(r[2]);//返回参数值
+	}
+	return null; 
 }
 
 </script>
